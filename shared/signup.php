@@ -10,7 +10,11 @@ include "connection.php";
 
 $query = "insert into users(username,password,email,role) 
           values('$_POST[username]','$cipher','$_POST[email]','$_POST[role]')";
-echo $query;
+// echo $query;
 
-mysqli_query($conn, $query);
-header("location:../shared/login.html");
+$mysqli_status = mysqli_query($conn, $query);
+if ($mysqli_status) {
+    header("location:../shared/login.html");
+} else {
+    echo mysqli_error($conn);
+}
