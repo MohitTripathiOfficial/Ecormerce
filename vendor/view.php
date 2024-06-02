@@ -74,10 +74,12 @@
         .product-price {
             font-size: 16px;
             color: #555;
+             margin-left: 10px;
         }
 
         .product-description {
             font-size: 14px;
+             margin-left: 10px;
             color: #777;
             margin-bottom: 15px;
             height: 50px;
